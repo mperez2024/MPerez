@@ -94,7 +94,21 @@
           <img src="assets/img/me.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>MEPV</h3>
+          <h3><script>
+          const now = new Date();
+
+          // Day of the week names
+          const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          const dayName = daysOfWeek[now.getDay()];
+
+          // Date components
+          const day = now.getDate();
+          const month = now.getMonth() + 1; // Months are 0-11
+          const year = now.getFullYear();
+
+          // Output: Day, MM/DD/YYYY
+          document.write("" + dayName + " " + month + "/" + day + "/" + year + ".");
+        </script></h3>
           <p class="font-italic">
             Steganography, Full-Stack Developer, Big Data, Cybersecurity, Cryptography, Computers, Digital Electronic, Industry 4.0.
           </p>
@@ -424,6 +438,7 @@
 </body>
 
 </html>
+
 
 
 
