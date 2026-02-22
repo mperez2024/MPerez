@@ -101,14 +101,20 @@
           const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
           const dayName = daysOfWeek[now.getDay()];
 
+          // Month names (Full Form)
+          const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+          const monthName = months[now.getMonth()];
+
           // Date components
           const day = now.getDate();
-          const month = now.getMonth() + 1; // Months are 0-11
           const year = now.getFullYear();
 
-          // Output: Day, MM/DD/YYYY
-          document.write(""  + month + "/" + day + "/" + year + ". " + dayName + "");
-        </script></h3>
+          // Output: Day . Date Month Year.
+          document.write(dayName + ", " + day + " " + monthName + " " + year + ".");
+          </script></h3>
           <p class="font-italic">
             Steganography, Full-Stack Developer, Big Data, Cybersecurity, Cryptography, Computers, Digital Electronic, Industry 4.0.
           </p>
@@ -438,6 +444,7 @@
 </body>
 
 </html>
+
 
 
 
