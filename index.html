@@ -3,11 +3,34 @@
 <!-- Creator: Miguel E. Pérez 2017-->
 <head>
      
+   <script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert("Nice try! No source code for you.");
+    window.location.href = "assets/img/3.gif"; 
+  });
+  document.onkeydown = function(e) {
+    if (
+      e.keyCode == 123 || 
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) || 
+      (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || 
+      (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))   
+    ) {
+      alert("Keyboard shortcuts are disabled here!");
+      return false;
+    }
+  };
+  setInterval(function() {
+    debugger;
+  }, 100);
+</script>
+    <!--D. R.-C.-->
     <script>
       document.addEventListener('contextmenu', event => event.preventDefault());
       </script>
-    
-    
+    <!--D. R.-C.-->
+      <!-- Disable CTRL U -->
 		<script>
 			/*function check(e)
 			{
@@ -15,11 +38,12 @@
 			}*/
 			document.onkeydown = function(e) {
 					if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
-						alert('Page protected By: MPérez');
+						alert('not allowed');
 					}
 					return false;
 			};
 			</script>
+<!-- Disable CTRL U -->
 
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -423,7 +447,9 @@
 
   <div class="credits">
    
-    Designed by: <a href="#">MPérez</a>
+    Copyright &#169; <span id="year"></span>. MP&eacute;rez - All Rights Reserved - <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        </script> Designed by: <a href="#">MPérez</a>
   </div>
 
   
